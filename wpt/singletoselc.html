@@ -1,0 +1,29 @@
+<!-- 1. Write a jQuery program to get a single element from a selection of elements
+of a HTML page. -->
+
+<!doctype html>
+<html>
+  <head>
+    <title>Get Single Element using jQuery</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("button").click(function () {
+          var element = $("p").eq(1).text(); // get second <p> element
+
+          alert(element); // display text of that element
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <p>First Paragraph</p>
+    <p>Second Paragraph</p>
+    <p>Third Paragraph</p>
+
+    <button>Get Element</button>
+  </body>
+</html>

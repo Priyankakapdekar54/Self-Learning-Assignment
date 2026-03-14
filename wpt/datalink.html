@@ -1,0 +1,27 @@
+<!-- You are having sample data for the link. Write jQuery code to change the hyperlink
+and the text of an existing link. -->
+
+<!doctype html>
+<html>
+  <head>
+    <title>Change Link using jQuery</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("button").click(function () {
+          $("#mylink").attr("href", "https://www.google.com"); // change hyperlink
+          $("#mylink").text("Visit Google"); // change link text
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <a id="mylink" href="https://www.yahoo.com">Visit Yahoo</a>
+    <br /><br />
+
+    <button>Change Link</button>
+  </body>
+</html>
