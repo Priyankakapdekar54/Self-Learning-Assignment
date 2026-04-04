@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <title>New User Registration</title>
+
+    <script>
+      function displayData() {
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var phone = document.getElementById("phone").value;
+        var city = document.getElementById("city").value;
+
+        var table = "<table border='1' cellpadding='10'>";
+        table += "<tr><th>Field</th><th>Value</th></tr>";
+        table += "<tr><td>Name</td><td>" + name + "</td></tr>";
+        table += "<tr><td>Email</td><td>" + email + "</td></tr>";
+        table += "<tr><td>Phone</td><td>" + phone + "</td></tr>";
+        table += "<tr><td>City</td><td>" + city + "</td></tr>";
+        table += "</table>";
+
+        document.getElementById("result").innerHTML = table;
+      }
+    </script>
+  </head>
+
+  <body>
+    <h2>New User Registration</h2>
+
+    <form>
+      Name: <input type="text" id="name" /><br /><br />
+      Email: <input type="email" id="email" /><br /><br />
+      Phone: <input type="text" id="phone" /><br /><br />
+      City: <input type="text" id="city" /><br /><br />
+
+      <button type="button" onclick="displayData()">Register</button>
+    </form>
+
+    <br /><br />
+
+    <div id="result"></div>
+  </body>
+</html>
